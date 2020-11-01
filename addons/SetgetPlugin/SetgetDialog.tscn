@@ -1,0 +1,220 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="InputEventKey" id=1]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="InputEventKey" id=3]
+scancode = 16777217
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[node name="SetgetDock" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1017.0
+margin_bottom = 593.0
+
+[node name="HBox" type="HBoxContainer" parent="VBox"]
+margin_right = 1010.0
+margin_bottom = 24.0
+
+[node name="Label" type="Label" parent="VBox/HBox"]
+margin_top = 5.0
+margin_right = 76.0
+margin_bottom = 19.0
+hint_tooltip = "脚本路径"
+mouse_filter = 1
+text = "Script Path: "
+
+[node name="ScriptPath" type="LineEdit" parent="VBox/HBox"]
+margin_left = 80.0
+margin_right = 1010.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 20 )
+size_flags_horizontal = 3
+custom_colors/font_color_uneditable = Color( 0.862745, 0.862745, 0.862745, 1 )
+editable = false
+placeholder_text = "Script Path"
+
+[node name="Scroll" type="ScrollContainer" parent="VBox"]
+margin_top = 28.0
+margin_right = 1010.0
+margin_bottom = 586.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="VBox/Scroll"]
+margin_right = 1010.0
+margin_bottom = 558.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="PanelContainer" parent="VBox/Scroll/VBox"]
+margin_right = 1010.0
+margin_bottom = 289.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckGroup" type="VBoxContainer" parent="VBox/Scroll/VBox/Panel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1003.0
+margin_bottom = 282.0
+size_flags_horizontal = 3
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="VBoxContainer" parent="VBox/Scroll/VBox"]
+margin_top = 293.0
+margin_right = 1010.0
+margin_bottom = 558.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Split5" type="Panel" parent="VBox/Scroll/VBox/Right"]
+margin_right = 1010.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 0, 1 )
+
+[node name="Split3" type="Control" parent="VBox/Scroll/VBox/Right"]
+margin_top = 5.0
+margin_right = 1010.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 0, 5 )
+
+[node name="UpdateList" type="Button" parent="VBox/Scroll/VBox/Right"]
+margin_top = 14.0
+margin_right = 1010.0
+margin_bottom = 34.0
+hint_tooltip = "更新列表信息为当前的脚本"
+text = "Update List"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Split" type="Control" parent="VBox/Scroll/VBox/Right"]
+margin_top = 38.0
+margin_right = 1010.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="SelectAll" type="Button" parent="VBox/Scroll/VBox/Right"]
+margin_top = 52.0
+margin_right = 1010.0
+margin_bottom = 72.0
+hint_tooltip = "勾选所有属性"
+text = "Select All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CancelAll" type="Button" parent="VBox/Scroll/VBox/Right"]
+margin_top = 76.0
+margin_right = 1010.0
+margin_bottom = 96.0
+hint_tooltip = "取消勾选所有属性"
+text = "Cancel Select All"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Add" type="Button" parent="VBox/Scroll/VBox/Right"]
+margin_top = 100.0
+margin_right = 1010.0
+margin_bottom = 120.0
+hint_tooltip = "添加列表属性的 setget 方法"
+shortcut = SubResource( 2 )
+text = "Add"
+
+[node name="Split6" type="Control" parent="VBox/Scroll/VBox/Right"]
+margin_top = 124.0
+margin_right = 1010.0
+margin_bottom = 134.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Close" type="Button" parent="VBox/Scroll/VBox/Right"]
+margin_top = 138.0
+margin_right = 1010.0
+margin_bottom = 158.0
+hint_tooltip = "关闭当前 SetgetDock"
+shortcut = SubResource( 4 )
+text = "Close"
+
+[node name="Split2" type="Control" parent="VBox/Scroll/VBox/Right"]
+margin_top = 162.0
+margin_right = 1010.0
+margin_bottom = 172.0
+rect_min_size = Vector2( 0, 10 )
+
+[node name="Split4" type="Panel" parent="VBox/Scroll/VBox/Right"]
+margin_top = 176.0
+margin_right = 1010.0
+margin_bottom = 177.0
+rect_min_size = Vector2( 0, 1 )
+
+[node name="Center" type="CenterContainer" parent="VBox/Scroll/VBox/Right"]
+margin_top = 181.0
+margin_right = 1010.0
+margin_bottom = 265.0
+
+[node name="CheckButton" type="GridContainer" parent="VBox/Scroll/VBox/Right/Center"]
+margin_left = 353.0
+margin_right = 656.0
+margin_bottom = 84.0
+columns = 2
+
+[node name="SetFunc" type="CheckButton" parent="VBox/Scroll/VBox/Right/Center/CheckButton"]
+margin_left = 2.0
+margin_right = 136.0
+margin_bottom = 40.0
+hint_tooltip = "添加 Set 方法"
+size_flags_horizontal = 4
+pressed = true
+text = "Set Func"
+
+[node name="GetFunc" type="CheckButton" parent="VBox/Scroll/VBox/Right/Center/CheckButton"]
+margin_left = 154.0
+margin_right = 291.0
+margin_bottom = 40.0
+hint_tooltip = "添加 Get 方法"
+size_flags_horizontal = 4
+pressed = true
+text = "Get Func"
+
+[node name="AddType" type="CheckButton" parent="VBox/Scroll/VBox/Right/Center/CheckButton"]
+margin_top = 44.0
+margin_right = 139.0
+margin_bottom = 84.0
+hint_tooltip = "对创建的方法添加类型提示"
+size_flags_horizontal = 4
+pressed = true
+text = "Add Type"
+
+[node name="AddedClose" type="CheckButton" parent="VBox/Scroll/VBox/Right/Center/CheckButton"]
+margin_left = 143.0
+margin_top = 44.0
+margin_right = 303.0
+margin_bottom = 84.0
+hint_tooltip = "点击添加之后，关闭 Dock"
+size_flags_horizontal = 4
+pressed = true
+text = "Added Close"
